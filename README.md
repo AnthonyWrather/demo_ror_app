@@ -111,20 +111,30 @@ http://127.0.0.1:15432/
 
 ## Create the home page and basic styling. (Release v0.0.2)
 
+```bash
 rails g controller home index
+```
 
 Update routes.rb
+```bash
   root "home#index"
+```
 
 Added to Gemfile
+```bash
 gem "inline_svg"
 gem "htmlbeautifier"
+```
 
 Added to Development section in Gemfile
+```bash
   gem "solargraph"
+```
 
 Run
+```bash
 bundle
+```
 
 Add the HTML etc to get a basic layout of the landing page.
 
@@ -136,7 +146,7 @@ Edit the test/controllers/home_controller_test.rb and rerun the tests.
 bin/rails db:test:prepare test test:system
 ```
 
-## Authentication with devise
+## Authentication with devise. (Release v0.0.3)
 
 ```bash
 rails g controller dashboard
@@ -168,12 +178,19 @@ Run rubocop
 rubocop -a
 ```
 
-Run the tests
+Run the tests.
+The current tests fail with db errors so that will need tidying up.
+
 ```bash
 bin/rails db:test:prepare test test:system
 ```
 
 Commit and push changes
+
+## Alert and Notice messages with stimulus
+
+```bash
+```
 
 
 ## Next Section
