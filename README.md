@@ -207,10 +207,19 @@ rubocop -a
 ## Build the Dashboard
 
 Setup the navigation bar.
-
+Build the user menu.
+TODO: Style the Profile screen.
+Toggle the Profile card
 
 ```bash
+rails g stimulus toggle
 ```
+
+Build the sidebar.
+
+
+
+
 
 
 ## Next Section
