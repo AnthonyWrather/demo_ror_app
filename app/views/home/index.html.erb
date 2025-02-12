@@ -1,17 +1,6 @@
 
 <div class="px-8 py-4 bg-gray-200 h-screen">
-  <nav class="flex justify-between mb-8">
-    <h1>
-      <a href="" class="text-4xl uppercase font-extrabold text-gray-900 hover:italic">Logo</a>
-    </h1>
-    <div class="flex gap-6">
-      <a href="" class="bg-orange-600 p-2 rounded-md capitalize font-bold text-gray-200 hover:bg-orange-800 flex items-center">Login
-        <span>
-          <%= inline_svg_tag("arrow-right-circle.svg", class: "size-6")%>
-        </span>
-      </a>
-      <a href="" class="bg-green-600 p-2 rounded-md capitalize font-bold text-gray-200 hover:bg-green-800">Sign up</a>
-  </nav>
+  <%= render "navbar" %>
   <main class="grid md:flex items-center justify-around relative">
     <section class="md:basis-1/2">
       <div class="hidden w-1/2 lg:flex justify-between absolute top-0">
@@ -19,8 +8,9 @@
         <%= inline_svg_tag("sign.svg", class: "size-40") %>
       </div>
       <h2 class="font-bold text-4xl capitalize mb-4">Manage your project.</h2>
-      <p class="mb-8 text-2xl">This is a demo app for managing projects and tasks.</p>
-      <a href="" class="bg-orange-600 p-2 rounded-md capitalize font-bold text-gray-200 hover:bg-orange-800 flex justify-center items-center">Get Started
+      <p class="mb-6 text-2xl">This is a demo app for managing projects and tasks.</p>
+      <p class="mb-8 text-1xl">Its not confidence that holds most people back, its familiarity.</p>
+      <a href="/dashboard" class="bg-orange-600 p-2 rounded-md capitalize font-bold text-gray-200 hover:bg-orange-800 flex justify-center items-center">Get Started
         <span>
           <%= inline_svg_tag("forward.svg", class: "size-10")%>
         </span>

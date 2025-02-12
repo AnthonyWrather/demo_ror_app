@@ -1,13 +1,14 @@
 # README
 
 This is a sample RoR application using Dev Containers.
+It uses devise, hotwire, turbo, stimulus with a postgres db.
 
 ```bash
   Ruby version : 3.3.3
   Rails version : 7.2.2.1
 ```
 
-## Create initial project and setup.
+## Create initial project and setup.  (Release v0.0.1)
 
 ```bash
 rails new demo_ror_app -c tailwind --database=postgresql --devcontainer
@@ -97,6 +98,8 @@ bin/dev
 Web App
 ```bash
 http://127.0.0.1:3000/
+http://127.0.0.1:3000/up
+http://127.0.0.1:3000/rails/info/routes
 ```
 
 PgAdmin
@@ -106,7 +109,7 @@ By using dev containers there is a complete separation between dev, test and pro
 http://127.0.0.1:15432/
 ```
 
-## Create the home page and basic styling. (Commit as heading)
+## Create the home page and basic styling. (Release v0.0.2)
 
 rails g controller home index
 
@@ -133,10 +136,47 @@ Edit the test/controllers/home_controller_test.rb and rerun the tests.
 bin/rails db:test:prepare test test:system
 ```
 
-
 ## Authentication with devise
 
 ```bash
+rails g controller dashboard
 ```
 
-##
+Edit app/controllers/dashboard_controller.rb
+Edit config/routes.rb
+
+Add devise
+```bash
+bundle add devise
+rails g devise:install
+rails g devise:views
+rails g devise user
+rails db:migrate
+```
+
+Edit app/views/layouts/application.html.erb to add the flash messages.
+
+Create app/views/dashboard.html.erb
+Edit app/controllers/dashboard_controller.rb and add the before action.
+Split the navbar out into its own file app/views/home/_navbar.html.erb
+
+Style the Sign Up screen
+Edit app/views/devise/registrations/new.html.erb
+
+Run rubocop
+```bash
+rubocop -a
+```
+
+Run the tests
+```bash
+bin/rails db:test:prepare test test:system
+```
+
+Commit and push changes
+
+
+## Next Section
+
+```bash
+```
