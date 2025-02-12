@@ -204,6 +204,13 @@ Run rubocop
 rubocop -a
 ```
 
+## Build the Dashboard
+
+Setup the navigation bar.
+
+
+```bash
+```
 
 
 ## Next Section

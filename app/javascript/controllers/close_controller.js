@@ -7,11 +7,9 @@ export default class extends Controller {
   static classes = [ "hidden" ]
 
   connect() {
-    console.log("Stimulus message!")
     setTimeout(() => this.hide(), this.timeoutValue)
   }
   hide() {
-    console.log("Hide me!")
     this.flashTarget.classList.add(this.hiddenClass)
   }
 }
