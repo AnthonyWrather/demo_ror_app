@@ -85,15 +85,26 @@ Run the following to enable you to publish to GitHub
 Either use VSCode or run the git commands to commit the code to GitHub
 
 Add Solargraph
+```bash
 gem install solargraph
+```
 
 And run the server
+```bash
 bin/dev
+```
 
 Web App
+```bash
 http://127.0.0.1:3000/
+```
+
 PgAdmin
+Create a connection to name:postgres hostname:postgres user:postgres password:progress
+By using dev containers there is a complete separation between dev, test and production.
+```bash
 http://127.0.0.1:15432/
+```
 
 ## Create the home page and basic styling. (Commit as heading)
 
