@@ -114,6 +114,15 @@ bundle
 
 Add the HTML etc to get a basic layout of the landing page.
 
+## GitHub CI/CD test run fails.
+
+Edit the test/controllers/home_controller_test.rb and rerun the tests.
+
+```bash
+bin/rails db:test:prepare test test:system
+```
+
+
 ## Authentication with devise
 
 ```bash
