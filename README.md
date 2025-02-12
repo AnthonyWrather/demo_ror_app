@@ -79,6 +79,7 @@ Run the following to enable you to publish to GitHub
 * EDIT: Not needed in a devcontainer but would be if running locally
 ```bash
   rails db:create
+  bin/rails db:migrate
 ```
 
 Either use VSCode or run the git commands to commit the code to GitHub
