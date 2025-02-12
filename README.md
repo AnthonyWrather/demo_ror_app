@@ -173,6 +173,9 @@ Split the navbar out into its own file app/views/home/_navbar.html.erb
 Style the Sign Up screen
 Edit app/views/devise/registrations/new.html.erb
 
+TODO: Need to add the bit about styling the login screen.
+Now implement the same styling on the login screen.
+
 Run rubocop
 ```bash
 rubocop -a
@@ -187,10 +190,20 @@ bin/rails db:test:prepare test test:system
 
 Commit and push changes
 
-## Alert and Notice messages with stimulus
+## Alert and Notice messages with stimulus. (Release v0.0.4)
 
+Create the close controller
 ```bash
+rails g stimulus close
 ```
+
+Setup the close controller for the close action on Alerts and Notices.
+
+Run rubocop
+```bash
+rubocop -a
+```
+
 
 
 ## Next Section
