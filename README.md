@@ -1,6 +1,13 @@
 # README
 
-* Create initial project.
+This is a sample RoR application using Dev Containers.
+
+```bash
+  Ruby version : 3.3.3
+  Rails version : 7.2.2.1
+```
+
+## Create initial project and setup.
 
 ```bash
 rails new demo_ror_app -c tailwind --database=postgresql --devcontainer
@@ -69,4 +76,46 @@ Run the following to enable you to publish to GitHub
   git config --global --add safe.directory /workspaces/demo_ror_app
 ```
 
+* EDIT: Not needed in a devcontainer but would be if running locally
+Either use VSCode or run the following commands to commit the code to GitHub
 
+```bash
+  rails db:create
+```
+
+Add Solargraph
+gem install solargraph
+
+And run the server
+bin/dev
+
+Web App
+http://127.0.0.1:3000/
+PgAdmin
+http://127.0.0.1:15432/
+
+## Create the home page and basic styling.
+
+rails g controller home index
+
+Update routes.rb
+  root "home#index"
+
+Added to Gemfile
+gem "inline_svg"
+gem "htmlbeautifier"
+
+Added to Development section in Gemfile
+  gem "solargraph"
+
+Run
+bundle
+
+Add the HTML etc to get a basic layout of the landing page.
+
+## Authentication with devise
+
+```bash
+```
+
+##
