@@ -77,11 +77,11 @@ Run the following to enable you to publish to GitHub
 ```
 
 * EDIT: Not needed in a devcontainer but would be if running locally
-Either use VSCode or run the following commands to commit the code to GitHub
-
 ```bash
   rails db:create
 ```
+
+Either use VSCode or run the git commands to commit the code to GitHub
 
 Add Solargraph
 gem install solargraph
@@ -94,7 +94,7 @@ http://127.0.0.1:3000/
 PgAdmin
 http://127.0.0.1:15432/
 
-## Create the home page and basic styling.
+## Create the home page and basic styling. (Commit as heading)
 
 rails g controller home index
 
