@@ -223,6 +223,9 @@ Run rubocop
 rubocop -a
 ```
 
+## Bonus Edit - Apply some style to the Edit User screen.
+
+
 ## Projects
 
 ```bash
