@@ -250,6 +250,10 @@ Layout for the Projects page.
 rails g controller projects index
 ```
 
+Create the table for the Projects.
+
+
+
 ## Next Section
 
 ```bash
