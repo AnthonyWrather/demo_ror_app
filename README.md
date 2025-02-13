@@ -252,6 +252,16 @@ rails g controller projects index
 
 Create the table for the Projects.
 Make the Projects table dynamic.
+Create the Project model.
+
+```bash
+# Associate the user_id with a project.
+rails g model project name:string user:references
+rails db:migrate
+```
+
+Enable the creation of Projects.
+
 
 
 ## Next Section

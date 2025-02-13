@@ -2,9 +2,10 @@ class ProjectsController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
   def index
-    @projects = []
-    10.times.each do |index|
-      @projects.append("project_#{index+1}")
-    end
+    @projects = Project.all
+  end
+
+  def create
+    #
   end
 end
