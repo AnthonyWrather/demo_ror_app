@@ -204,7 +204,7 @@ Run rubocop
 rubocop -a
 ```
 
-## Build the Dashboard
+## Build the Dashboard. (Release v0.0.5)
 
 Setup the navigation bar.
 Build the user menu.
@@ -216,9 +216,17 @@ rails g stimulus toggle
 ```
 
 Build the sidebar.
+Toggle the sidebar.
 
+Run rubocop
+```bash
+rubocop -a
+```
 
+## Projects
 
+```bash
+```
 
 
 
