@@ -15,7 +15,11 @@
           <td class="px-4 py-3"> 80%</td>
           <td class="py-3"><%= inline_svg_tag("edit.svg")%></td>
           <td class="py-3"><%= inline_svg_tag("view.svg")%></td>
-          <td class="py-3"><%= inline_svg_tag("delete.svg")%></td>
+          <td class="py-3">
+            <%= button_to project_path(project), method: :delete, data: {turbo_confirm:("Are you sure?")}, class: "hover:cursor-pointer" do%>
+              <%= inline_svg_tag("delete.svg")%>
+            <% end%>
+          </td>
         </tr>
         <% end%>
       </tbody>
