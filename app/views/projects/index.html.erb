@@ -8,13 +8,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="border-b border-gray-500">
-          <td class="px-4 py-3"> Project Name</td>
+        <% @projects.each do |project| %>
+        <tr class="border-b border-gray-500 capitalize">
+          <td class="px-4 py-3"><%= project%></td>
           <td class="px-4 py-3"> 80%</td>
           <td class="py-3"><%= inline_svg_tag("edit.svg")%></td>
           <td class="py-3"><%= inline_svg_tag("view.svg")%></td>
           <td class="py-3"><%= inline_svg_tag("delete.svg")%></td>
         </tr>
+        <% end%>
       </tbody>
     </table>
   </div>

@@ -251,7 +251,7 @@ rails g controller projects index
 ```
 
 Create the table for the Projects.
-
+Make the Projects table dynamic.
 
 
 ## Next Section
