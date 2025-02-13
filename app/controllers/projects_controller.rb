@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
-  before_action :set_project, only: [ :edit, :update, :destroy ]
+  before_action :set_project, only: [ :edit, :update, :destroy, :show ]
   def index
     @projects = Project.all
   end
@@ -13,6 +13,10 @@ class ProjectsController < ApplicationController
     else
       redirect_to projects_url, alert: "Project NOT created: #{@project.errors.full_messages.join(",")}"
     end
+  end
+
+  def show
+    #
   end
 
   def edit
