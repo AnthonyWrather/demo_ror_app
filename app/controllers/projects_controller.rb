@@ -6,6 +6,16 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    #
+    @project = current_user.projects.build(project_params)
+    if @project.save
+      redirect_to projects_url, notice: "Project created."
+    else
+      redirect_to projects_url, alert: "Project NOT created: #{@project.errors.full_messages.join(",")}"
+    end
+  end
+
+  private
+  def project_params
+    params.require(:project).permit(:name)
   end
 end
