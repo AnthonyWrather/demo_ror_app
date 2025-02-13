@@ -264,6 +264,11 @@ Enable the creation of Projects.
 Enable the deletion of Projects.
 Create a basic Project edit screen.
 Edit Project in a modal. (Turbo Frames)
+Setting up Turbo Morphing to preserve the scroll.
+
+
+
+
 
 ## Next Section
 
