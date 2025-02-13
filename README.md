@@ -242,7 +242,7 @@ rubocop -a
 
 Styled the Edit User screen.
 
-## Setup the Project screens. (Release v0.0.X)
+## Setup the Project screens. (Release v0.0.6)
 
 Layout for the Projects page.
 
@@ -266,7 +266,7 @@ Create a basic Project edit screen.
 Edit Project in a modal. (Turbo Frames)
 Setting up Turbo Morphing to preserve the scroll.
 
-## Setup the Tasks
+## Setup the Tasks (Release v0.0.x)
 
 Create the scaffold for the Tasks.
 
@@ -275,7 +275,7 @@ rails g scaffold task name:string due_date:date completed_at:datetime priority:i
 rails db:migrate
 ```
 
-
+Crud tasks and Enums.
 
 
 ## Next Section
