@@ -26,6 +26,7 @@
         <div class="flex h-full">
           <%= render "dashboard/sidebar"%>
           <%= yield %>
+          <%= turbo_frame_tag :modal %>
         </div>
       </div>
     </main>

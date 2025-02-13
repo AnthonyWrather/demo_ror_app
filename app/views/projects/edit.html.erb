@@ -1,8 +1,17 @@
-<div class="max-w-sm border-b border-blue-500 pb-1 mx-auto">
-  <%= form_with model: @project do |form|%>
-    <div class="flex">
-      <%= form.text_field :name, placeholder: "Create new Project.", class: "bg-transparent border-none w-full text-gray-200"%>
-      <%= form.submit "Update", class: "bg-blue-500 cursor-pointer rounded-md hover:bg-blue-600"%>
+<%= turbo_frame_tag :modal do %>
+  <div class="relative">
+    <div class="fixed inset-0 bg-gray-500/75"></div>
+    <div class="fixed inset-0 bg-gray-800 mt-8 p-8 size-96  mx-auto">
+      <%= form_with model: @project do |form|%>
+        <div class="mt-8 flex flex-col items-center">
+          <%= form.text_field :name, placeholder: "Create new Project.", class: "rounded-md mb-4 p-3 w-full bg-gray-900 border-none w-full text-gray-200"%>
+          <%= form.submit "Update", class: "w-full bg-blue-500 cursor-pointer rounded-md hover:bg-blue-600", data: {turbo_frame: "_top"}%>
+          <div class="absolute right-0 bottom-0">
+            <%= button_to projects_path do %>
+              <%= inline_svg_tag("close.svg", class: "text-gray-500 hover:text-gray-200") %>
+            <% end %>
+          </div>
+      <% end%>
     </div>
-  <% end%>
-</div>
+  </div>
+<% end %>
