@@ -275,10 +275,10 @@ rails g scaffold task name:string due_date:date completed_at:datetime priority:i
 rails db:migrate
 ```
 
-Crud tasks and Enums.
-Move tasks to the Dashboard layout.
+Crud Tasks and Enums.
+Move Tasks to the Dashboard layout.
 Nest Tasks under Projects.
-
+New Project+Task modal.
 
 ## Next Section
 
