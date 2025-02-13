@@ -13,7 +13,11 @@
         <tr class="border-b border-gray-500 capitalize">
           <td class="px-4 py-3"><%= project.name%></td>
           <td class="px-4 py-3"> 80%</td>
-          <td class="py-3"><%= inline_svg_tag("edit.svg")%></td>
+          <td class="py-3">
+            <%= link_to edit_project_path(project) do%>
+              <%= inline_svg_tag("edit.svg")%>
+            <% end%>
+          </td>
           <td class="py-3"><%= inline_svg_tag("view.svg")%></td>
           <td class="py-3">
             <%= button_to project_path(project), method: :delete, data: {turbo_confirm:("Are you sure?")}, class: "hover:cursor-pointer" do%>

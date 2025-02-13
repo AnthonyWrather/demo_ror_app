@@ -262,7 +262,7 @@ rails db:migrate
 
 Enable the creation of Projects.
 Enable the deletion of Projects.
-
+Create a basic Project edit screen.
 
 
 ## Next Section

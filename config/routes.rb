@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :dashboard, only: [ :index ]
-  resources :projects, only: [ :index, :create, :destroy ]
+  resources :projects
   root "home#index"
 
   # get "home/index"
