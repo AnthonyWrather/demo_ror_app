@@ -266,6 +266,14 @@ Create a basic Project edit screen.
 Edit Project in a modal. (Turbo Frames)
 Setting up Turbo Morphing to preserve the scroll.
 
+## Setup the Tasks
+
+Create the scaffold for the Tasks.
+
+```bash
+rails g scaffold task name:string due_date:date completed_at:datetime priority:integer project:references
+rails db:migrate
+```
 
 
 
