@@ -40,6 +40,7 @@ Added pgadmin to the Dev Containers setup in .devcontainer/compose.yaml
 ```
 
 Added some common extensions to VSCode
+
 ```bash
   "customizations": {
     "vscode": {
@@ -78,6 +79,7 @@ Run the following to enable you to publish to GitHub
 ```
 
 * EDIT: Not needed in a devcontainer but would be if running locally
+
 ```bash
   rails db:create
   bin/rails db:migrate
@@ -86,16 +88,19 @@ Run the following to enable you to publish to GitHub
 Either use VSCode or run the git commands to commit the code to GitHub
 
 Add Solargraph
+
 ```bash
 gem install solargraph
 ```
 
 And run the server
+
 ```bash
 bin/dev
 ```
 
 Web App
+
 ```bash
 http://127.0.0.1:3000/
 http://127.0.0.1:3000/up
@@ -105,6 +110,7 @@ http://127.0.0.1:3000/rails/info/routes
 PgAdmin
 Create a connection to name:postgres hostname:postgres user:postgres password:progress
 By using dev containers there is a complete separation between dev, test and production.
+
 ```bash
 http://127.0.0.1:15432/
 ```
@@ -116,22 +122,26 @@ rails g controller home index
 ```
 
 Update routes.rb
+
 ```bash
   root "home#index"
 ```
 
 Added to Gemfile
+
 ```bash
 gem "inline_svg"
 gem "htmlbeautifier"
 ```
 
 Added to Development section in Gemfile
+
 ```bash
   gem "solargraph"
 ```
 
 Run
+
 ```bash
 bundle
 ```
@@ -156,6 +166,7 @@ Edit app/controllers/dashboard_controller.rb
 Edit config/routes.rb
 
 Add devise
+
 ```bash
 bundle add devise
 rails g devise:install
@@ -177,6 +188,7 @@ TODO: Need to add the bit about styling the login screen.
 Now implement the same styling on the login screen.
 
 Run rubocop
+
 ```bash
 rubocop -a
 ```
@@ -193,6 +205,7 @@ Commit and push changes
 ## Alert and Notice messages with stimulus. (Release v0.0.4)
 
 Create the close controller
+
 ```bash
 rails g stimulus close
 ```
@@ -200,6 +213,7 @@ rails g stimulus close
 Setup the close controller for the close action on Alerts and Notices.
 
 Run rubocop
+
 ```bash
 rubocop -a
 ```
@@ -219,19 +233,22 @@ Build the sidebar.
 Toggle the sidebar.
 
 Run rubocop
+
 ```bash
 rubocop -a
 ```
 
-## Bonus Edit - Apply some style to the Edit User screen.
+## Bonus Edit - Apply some style to the Edit User screen. (No Release)
 
+Styled the Edit User screen.
 
-## Projects
+## Setup the Project screens. (Release v0.0.X)
+
+Layout for the Projects page.
 
 ```bash
+rails g controller projects index
 ```
-
-
 
 ## Next Section
 
