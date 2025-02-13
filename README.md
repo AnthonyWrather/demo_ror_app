@@ -276,6 +276,7 @@ rails db:migrate
 ```
 
 Crud tasks and Enums.
+Move tasks to the Dashboard layout.
 
 
 ## Next Section
