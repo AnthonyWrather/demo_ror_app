@@ -304,6 +304,7 @@ rails test
 rails test:system
 ```
 
+Auto update the competed_at date/time.
 
 ## Next Section
 
