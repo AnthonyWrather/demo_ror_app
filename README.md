@@ -262,7 +262,7 @@ Create a basic Project edit screen.\
 Edit Project in a modal. (Turbo Frames)\
 Setting up Turbo Morphing to preserve the scroll.
 
-## Setup the Tasks (Release v0.0.x)
+## Setup the Tasks (Release v0.0.7)
 
 Create the scaffold for the Tasks.
 
