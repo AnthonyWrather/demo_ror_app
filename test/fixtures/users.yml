@@ -6,8 +6,6 @@
 #
 one:
   email: "user1@test.com"
-#  password: "password"
 
 two:
   email: "user2@test.com"
-#  password: "password"

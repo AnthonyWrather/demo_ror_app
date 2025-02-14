@@ -312,6 +312,13 @@ Format the date/time in Tasks.
 Sort the Tasks.
 Task progress bar.
 
+## Generate sample data using Faker (Release 0.0.x)
+
+Faker seeding data.
+
+```bash
+```
+
 ## Next Section
 
 ```bash
