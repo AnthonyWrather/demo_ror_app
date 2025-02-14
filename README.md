@@ -315,8 +315,18 @@ Task progress bar.
 ## Generate sample data using Faker (Release 0.0.x)
 
 Faker seeding data.
+Using the Rails console to validate the Dev Test data.
 
 ```bash
+rails -c
+Loading development environment (Rails 7.2.2.1)
+demo-ror-app(dev)> User.all
+demo-ror-app(dev)> User.count
+demo-ror-app(dev)> Project.all
+demo-ror-app(dev)> Project.count
+demo-ror-app(dev)> Task.all
+demo-ror-app(dev)> Task.count
+demo-ror-app(dev)> exit
 ```
 
 ## Next Section

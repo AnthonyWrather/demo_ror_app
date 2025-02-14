@@ -9,32 +9,42 @@
 #   end
 
 user1 = User.create(
-  email: "userfirst@test.com",
+  email: "user1@test.com",
   password: "password"
 )
 
 user2 = User.create(
-  email: "usersecond@test.com",
+  email: "user2@test.com",
   password: "password"
 )
 
-projects_user1 = 10.times.map do
+User.create(
+  email: "user3@test.com",
+  password: "password"
+)
+
+User.create(
+  email: "user4@test.com",
+  password: "password"
+)
+
+projects_user1 = rand(1..10).times.map do
   Project.create!(name: Faker::Educator.unique.subject, user: user1)
 end
 
 projects_user1.each do |project|
-  20.times do
+  rand(1..20).times do
     Task.create!(name: Faker::ProgrammingLanguage.unique.name,
       project: project, priority: rand(-1..3), due_date: Faker::Date.forward(days: 60))
   end
 end
 
-projects_user2 = 10.times.map do
+projects_user2 = rand(1..10).times.map do
   Project.create!(name: Faker::Educator.unique.subject, user: user2)
 end
 
 projects_user2.each do |project|
-  20.times do
+  rand(1..20).times do
     Task.create!(name: Faker::ProgrammingLanguage.unique.name,
       project: project, priority: rand(-1..3), due_date: Faker::Date.forward(days: 60))
   end
