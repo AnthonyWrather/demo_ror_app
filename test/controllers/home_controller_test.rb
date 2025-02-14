@@ -1,7 +1,7 @@
 require "test_helper"
 
 class HomeControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test "Unauthenticated users should get the home page." do
     get "/"
     assert_response :success
   end

@@ -285,6 +285,7 @@ Create the table of Tasks.
 Update and Delete a Project+Task
 Bugfix the flash timeout and redirect after Login
 Task complete checkbox and tidy up some files.
+BONUS: Added some basic Redirect testing for unauthenticated users.
 
 
 
