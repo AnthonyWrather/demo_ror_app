@@ -312,7 +312,7 @@ Format the date/time in Tasks.
 Sort the Tasks.
 Task progress bar.
 
-## Generate sample data using Faker (Release 0.0.x)
+## Generate sample data using Faker (Release 0.0.8)
 
 Faker seeding data.
 Using the Rails console to validate the Dev Test data.
