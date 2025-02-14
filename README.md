@@ -305,6 +305,9 @@ rails test:system
 ```
 
 Auto update the competed_at date/time.
+Refactor completed_at callback.
+
+
 
 ## Next Section
 
