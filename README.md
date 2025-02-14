@@ -284,6 +284,25 @@ Task complete checkbox and tidy up some files.\
 BONUS: Added some basic Redirect testing for unauthenticated users.\
 BONUS: Added some basic System tests.\
 BONUS: Readme tidy up.\
+Toggle completed task.
+
+```bash
+rails g migration add_completed_to_tasks completed:boolean
+```
+
+Edit db/migrate/20250214121801_add_completed_to_tasks.rb and add a default of false.
+
+```bash
+rails db:migrate
+```
+
+Now run the standard code cleanup and tests.
+
+```bash
+rubocop -a
+rails test
+rails test:system
+```
 
 
 ## Next Section
