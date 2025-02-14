@@ -1,7 +1,6 @@
 # README
 
-This is a sample RoR application using Dev Containers.
-
+This is a sample RoR application using Dev Containers.\
 It uses devise, hotwire, turbo, stimulus with a postgres db.
 
 ```bash
@@ -86,8 +85,7 @@ Run the following to enable you to publish to GitHub
   bin/rails db:migrate
 ```
 
-Either use VSCode or run the git commands to commit the code to GitHub
-
+Either use VSCode or run the git commands to commit the code to GitHub\
 Add Solargraph
 
 ```bash
@@ -110,8 +108,7 @@ http://127.0.0.1:3000/rails/info/routes
 
 PgAdmin
 
-Create a connection to name:postgres hostname:postgres user:postgres password:progress
-
+Create a connection to name:postgres hostname:postgres user:postgres password:progress\
 By using dev containers there is a complete separation between dev, test and production.
 
 ```bash
@@ -165,7 +162,7 @@ bin/rails db:test:prepare test test:system
 rails g controller dashboard
 ```
 
-Edit app/controllers/dashboard_controller.rb
+Edit app/controllers/dashboard_controller.rb\
 Edit config/routes.rb
 
 Add devise
@@ -178,16 +175,12 @@ rails g devise user
 rails db:migrate
 ```
 
-Edit app/views/layouts/application.html.erb to add the flash messages.
-
-Create app/views/dashboard.html.erb
-Edit app/controllers/dashboard_controller.rb and add the before action.
-Split the navbar out into its own file app/views/home/_navbar.html.erb
-
-Style the Sign Up screen
-Edit app/views/devise/registrations/new.html.erb
-
-TODO: Need to add the bit about styling the login screen.
+Edit app/views/layouts/application.html.erb to add the flash messages.\
+Create app/views/dashboard.html.erb\
+Edit app/controllers/dashboard_controller.rb and add the before action.\
+Split the navbar out into its own file app/views/home/_navbar.html.erb\
+Style the Sign Up screen\
+Edit app/views/devise/registrations/new.html.erb\
 Now implement the same styling on the login screen.
 
 Run rubocop
@@ -196,7 +189,7 @@ Run rubocop
 rubocop -a
 ```
 
-Run the tests.
+Run the tests.\
 The current tests fail with db errors so that will need tidying up.
 
 ```bash
@@ -223,16 +216,16 @@ rubocop -a
 
 ## Build the Dashboard. (Release v0.0.5)
 
-Setup the navigation bar.
-Build the user menu.
-TODO: Style the Profile screen.
+Setup the navigation bar.\
+Build the user menu.\
+TODO: Style the Profile screen.\
 Toggle the Profile card
 
 ```bash
 rails g stimulus toggle
 ```
 
-Build the sidebar.
+Build the sidebar.\
 Toggle the sidebar.
 
 Run rubocop
@@ -253,8 +246,8 @@ Layout for the Projects page.
 rails g controller projects index
 ```
 
-Create the table for the Projects.
-Make the Projects table dynamic.
+Create the table for the Projects.\
+Make the Projects table dynamic.\
 Create the Project model.
 
 ```bash
@@ -263,10 +256,10 @@ rails g model project name:string user:references
 rails db:migrate
 ```
 
-Enable the creation of Projects.
-Enable the deletion of Projects.
-Create a basic Project edit screen.
-Edit Project in a modal. (Turbo Frames)
+Enable the creation of Projects.\
+Enable the deletion of Projects.\
+Create a basic Project edit screen.\
+Edit Project in a modal. (Turbo Frames)\
 Setting up Turbo Morphing to preserve the scroll.
 
 ## Setup the Tasks (Release v0.0.x)
@@ -278,19 +271,19 @@ rails g scaffold task name:string due_date:date completed_at:datetime priority:i
 rails db:migrate
 ```
 
-Crud Tasks and Enums.
-Move Tasks to the Dashboard layout.
-Nest Tasks under Projects.
-New Project+Task modal.
-Style the Project+Task modal.
-Project+Task CRUD operations.
-Create the table of Tasks.
-Update and Delete a Project+Task
-Bugfix the flash timeout and redirect after Login
-Task complete checkbox and tidy up some files.
-BONUS: Added some basic Redirect testing for unauthenticated users.
-BONUS: Added some basic System tests.
-BONUS: Readme tidy up.
+Crud Tasks and Enums.\
+Move Tasks to the Dashboard layout.\
+Nest Tasks under Projects.\
+New Project+Task modal.\
+Style the Project+Task modal.\
+Project+Task CRUD operations.\
+Create the table of Tasks.\
+Update and Delete a Project+Task\
+Bugfix the flash timeout and redirect after Login\
+Task complete checkbox and tidy up some files.\
+BONUS: Added some basic Redirect testing for unauthenticated users.\
+BONUS: Added some basic System tests.\
+BONUS: Readme tidy up.\
 
 
 ## Next Section
