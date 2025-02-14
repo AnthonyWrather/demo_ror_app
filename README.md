@@ -281,6 +281,8 @@ Nest Tasks under Projects.
 New Project+Task modal.
 Style the Project+Task modal.
 Project+Task CRUD operations.
+Create the table of Tasks.
+
 
 * TODO: Noticed the flash timeout is broken. TBI
 
