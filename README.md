@@ -284,7 +284,7 @@ Project+Task CRUD operations.
 Create the table of Tasks.
 Update and Delete a Project+Task
 Bugfix the flash timeout and redirect after Login
-
+Task complete checkbox and tidy up some files.
 
 
 

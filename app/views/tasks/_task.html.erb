@@ -2,6 +2,7 @@
   <table class="bg-gray-800 rounded-md w-full">
     <thead class="text-left capitalize rounded-md border-b border-gray-500">
       <tr>
+        <th class="px-4 py-3"> Complete</th>
         <th class="px-4 py-3"> Name</th>
         <th class="px-4 py-3"> Due Date</th>
         <th class="px-4 py-3"> Priority</th>
@@ -11,6 +12,9 @@
     <tbody>
       <% @project.tasks.each do |task| %>
       <tr class="border-b border-gray-500 capitalize">
+        <td>
+          <input type=checkbox name="" id="">
+        </td>
         <td class="px-4 py-3"><%= task.name%></td>
         <td class="px-4 py-3"><%= task.due_date%></td>
         <td class="px-4 py-3"><%= task.priority%></td>
