@@ -310,6 +310,7 @@ Rearrange the Tasks table and hide the Sidebar.
 Implement Task validation.
 Format the date/time in Tasks.
 Sort the Tasks.
+Task progress bar.
 
 ## Next Section
 
