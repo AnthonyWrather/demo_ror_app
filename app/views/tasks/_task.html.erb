@@ -16,12 +16,12 @@
         <td class="px-4 py-3"><%= task.priority%></td>
         <td class="px-4 py-3"><%= task.completed_at%></td>
         <td class="py-3">
-          <%= link_to "#", data: { turbo: true, turbo_frame: :modal } do%>
+          <%= link_to edit_project_task_path(@project, task), data: { turbo: true, turbo_frame: :modal } do%>
             <%= inline_svg_tag("edit.svg")%>
           <% end%>
         </td>
         <td class="py-3">
-          <%= button_to "#", method: :delete, data: {turbo_confirm:("Are you sure?")}, class: "hover:cursor-pointer" do%>
+          <%= button_to project_task_path(@project, task), method: :delete, data: {turbo_confirm:("Are you sure?")}, class: "hover:cursor-pointer" do%>
             <%= inline_svg_tag("delete.svg")%>
           <% end%>
         </td>

@@ -282,9 +282,10 @@ New Project+Task modal.
 Style the Project+Task modal.
 Project+Task CRUD operations.
 Create the table of Tasks.
+Update and Delete a Project+Task
 
 
-* TODO: Noticed the flash timeout is broken. TBI
+TODO: Noticed the flash timeout is broken. TBI
 
 
 
