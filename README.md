@@ -1,6 +1,7 @@
 # README
 
 This is a sample RoR application using Dev Containers.
+
 It uses devise, hotwire, turbo, stimulus with a postgres db.
 
 ```bash
@@ -108,7 +109,9 @@ http://127.0.0.1:3000/rails/info/routes
 ```
 
 PgAdmin
+
 Create a connection to name:postgres hostname:postgres user:postgres password:progress
+
 By using dev containers there is a complete separation between dev, test and production.
 
 ```bash
@@ -287,6 +290,7 @@ Bugfix the flash timeout and redirect after Login
 Task complete checkbox and tidy up some files.
 BONUS: Added some basic Redirect testing for unauthenticated users.
 BONUS: Added some basic System tests.
+BONUS: Readme tidy up.
 
 
 ## Next Section
