@@ -280,6 +280,10 @@ Move Tasks to the Dashboard layout.
 Nest Tasks under Projects.
 New Project+Task modal.
 Style the Project+Task modal.
+Project+Task CRUD operations.
+
+* TODO: Noticed the flash timeout is broken. TBI
+
 
 
 ## Next Section
