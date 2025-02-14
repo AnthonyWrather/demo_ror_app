@@ -279,6 +279,8 @@ Crud Tasks and Enums.
 Move Tasks to the Dashboard layout.
 Nest Tasks under Projects.
 New Project+Task modal.
+Style the Project+Task modal.
+
 
 ## Next Section
 
