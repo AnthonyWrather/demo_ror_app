@@ -283,9 +283,8 @@ Style the Project+Task modal.
 Project+Task CRUD operations.
 Create the table of Tasks.
 Update and Delete a Project+Task
+Bugfix the flash timeout and redirect after Login
 
-
-TODO: Noticed the flash timeout is broken. TBI
 
 
 
