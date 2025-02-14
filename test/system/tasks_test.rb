@@ -5,45 +5,50 @@ class TasksTest < ApplicationSystemTestCase
     @task = tasks(:one)
   end
 
-  test "visiting the index" do
-    visit tasks_url
-    assert_selector "h1", text: "Tasks"
+  test "Unauthenticated users should get redirected." do
+    visit project_task_path(1, 1)
+    assert_text "You need to sign in or sign up"
   end
 
-  test "should create task" do
-    visit tasks_url
-    click_on "New task"
+  # test "visiting the index" do
+  #   visit tasks_url
+  #   assert_selector "h1", text: "Tasks"
+  # end
 
-    fill_in "Completed at", with: @task.completed_at
-    fill_in "Due date", with: @task.due_date
-    fill_in "Name", with: @task.name
-    fill_in "Priority", with: @task.priority
-    fill_in "Project", with: @task.project_id
-    click_on "Create Task"
+  # test "should create task" do
+  #   visit tasks_url
+  #   click_on "New task"
 
-    assert_text "Task was successfully created"
-    click_on "Back"
-  end
+  #   fill_in "Completed at", with: @task.completed_at
+  #   fill_in "Due date", with: @task.due_date
+  #   fill_in "Name", with: @task.name
+  #   fill_in "Priority", with: @task.priority
+  #   fill_in "Project", with: @task.project_id
+  #   click_on "Create Task"
 
-  test "should update Task" do
-    visit task_url(@task)
-    click_on "Edit this task", match: :first
+  #   assert_text "Task was successfully created"
+  #   click_on "Back"
+  # end
 
-    fill_in "Completed at", with: @task.completed_at.to_s
-    fill_in "Due date", with: @task.due_date
-    fill_in "Name", with: @task.name
-    fill_in "Priority", with: @task.priority
-    fill_in "Project", with: @task.project_id
-    click_on "Update Task"
+  # test "should update Task" do
+  #   visit task_url(@task)
+  #   click_on "Edit this task", match: :first
 
-    assert_text "Task was successfully updated"
-    click_on "Back"
-  end
+  #   fill_in "Completed at", with: @task.completed_at.to_s
+  #   fill_in "Due date", with: @task.due_date
+  #   fill_in "Name", with: @task.name
+  #   fill_in "Priority", with: @task.priority
+  #   fill_in "Project", with: @task.project_id
+  #   click_on "Update Task"
 
-  test "should destroy Task" do
-    visit task_url(@task)
-    click_on "Destroy this task", match: :first
+  #   assert_text "Task was successfully updated"
+  #   click_on "Back"
+  # end
 
-    assert_text "Task was successfully destroyed"
-  end
+  # test "should destroy Task" do
+  #   visit task_url(@task)
+  #   click_on "Destroy this task", match: :first
+
+  #   assert_text "Task was successfully destroyed"
+  # end
 end

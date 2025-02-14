@@ -286,7 +286,7 @@ Update and Delete a Project+Task
 Bugfix the flash timeout and redirect after Login
 Task complete checkbox and tidy up some files.
 BONUS: Added some basic Redirect testing for unauthenticated users.
-
+BONUS: Added some basic System tests.
 
 
 ## Next Section
