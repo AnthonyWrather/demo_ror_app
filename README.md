@@ -314,11 +314,20 @@ Task progress bar.
 
 ## Generate sample data using Faker (Release 0.0.8)
 
-Faker seeding data.\
+Faker seeding data.
+
+```bash
+rails db:drop
+rails db:reset
+```
+
 Using the Rails console to validate the Dev Test data.
 
 ```bash
-rails -c
+irb
+rails c
+rails console
+
 Loading development environment (Rails 7.2.2.1)
 demo-ror-app(dev)> User.all
 demo-ror-app(dev)> User.count
@@ -354,6 +363,12 @@ rails g controller search index
 
 Edit app/controllers/search_controller.rb and add console to the index method.\
 You can type in params to see what you dealing with.
+
+Styling the Search Project page.
+
+
+
+
 
 
 
