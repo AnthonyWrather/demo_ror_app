@@ -364,8 +364,12 @@ rails g controller search index
 Edit app/controllers/search_controller.rb and add console to the index method.\
 You can type in params to see what you dealing with.
 
-Styling the Search Project page.
+Styling the Search Project page.\
+Search via debounce
 
+```bash
+rails g stimulus search
+```
 
 
 
