@@ -353,7 +353,7 @@ Add pagy
 bundle install
 ```
 
-## Searching and Sorting
+## Searching and Sorting (Release v0.0.10)
 
 Create the Search controller.
 
@@ -383,9 +383,11 @@ https://www.ruby-toolbox.com/categories \
 https://github.com/activerecord-hackery/ransack
 
 Sort Tasks by Priority\
-Sort Tasks using Table headers.
+Sort Tasks using Table headers.\
+Styling by Priority and Expired.
 
-## Next Section
+
+## Next Section (Release v0.0.x)
 
 ```bash
 ```
