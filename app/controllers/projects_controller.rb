@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_project, only: [ :edit, :update, :destroy, :show ]
   def index
-    @projects = Project.all
+    @pagy, @projects = pagy(Project.includes(:tasks), limit: 10)
   end
 
   def create
@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    #
+    @pagy, @tasks = pagy(@project.tasks.incomplete_first, limit: 10)
   end
 
   def edit

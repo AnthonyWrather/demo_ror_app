@@ -304,17 +304,17 @@ rails test
 rails test:system
 ```
 
-Auto update the competed_at date/time.
-Refactor completed_at callback.
-Rearrange the Tasks table and hide the Sidebar.
-Implement Task validation.
-Format the date/time in Tasks.
-Sort the Tasks.
+Auto update the competed_at date/time.\
+Refactor completed_at callback.\
+Rearrange the Tasks table and hide the Sidebar.\
+Implement Task validation.\
+Format the date/time in Tasks.\
+Sort the Tasks.\
 Task progress bar.
 
 ## Generate sample data using Faker (Release 0.0.8)
 
-Faker seeding data.
+Faker seeding data.\
 Using the Rails console to validate the Dev Test data.
 
 ```bash
@@ -327,6 +327,21 @@ demo-ror-app(dev)> Project.count
 demo-ror-app(dev)> Task.all
 demo-ror-app(dev)> Task.count
 demo-ror-app(dev)> exit
+```
+
+## Pagination (Release v0.0.9)
+
+Paginating Projects\
+Paginating Tasks
+
+Useful websites\
+https://www.ruby-toolbox.com/categories\
+https://ddnexus.github.io/pagy/
+
+Add pagy
+
+```bash
+bundle install
 ```
 
 ## Next Section
