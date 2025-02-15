@@ -22,7 +22,6 @@ class Task < ApplicationRecord
   end
 
   def self.ransackable_attributes(auth_object = nil)
-    ["completed", "completed_at", "created_at", "due_date", "id", "id_value", "name", "priority", "project_id", "updated_at"]
+    [ "completed", "completed_at", "created_at", "due_date", "id", "id_value", "name", "priority", "project_id", "updated_at" ]
   end
-
 end

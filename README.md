@@ -382,7 +382,8 @@ Useful websites\
 https://www.ruby-toolbox.com/categories \
 https://github.com/activerecord-hackery/ransack
 
-Sort Tasks by Priority
+Sort Tasks by Priority\
+Sort Tasks using Table headers.
 
 ## Next Section
 

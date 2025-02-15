@@ -3,8 +3,8 @@
     <thead class="text-left capitalize rounded-md border-b border-gray-500">
       <tr>
         <th class="px-4 py-3"> Complete</th>
-        <th class="px-4 py-3"> Name</th>
-        <th class="px-4 py-3"> Due Date</th>
+        <th class="px-4 py-3"><%= sort_link(@q, :name) %></th>
+        <th class="px-4 py-3"><%= sort_link(@q, :due_date, "Due By") %></th>
         <th class="px-4 py-3"> Priority</th>
         <th class="px-4 py-3"> Completed</th>
       </tr>
