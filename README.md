@@ -391,7 +391,8 @@ Styling by Priority and Expired.
 ## Notifications (Release v0.0.x)
 
 Notification UI\
-Identify the urgent tasks.
+Identify the urgent tasks.\
+Install and Setup noticed gem.
 
 Install noticed and run bundler.\
 https://github.com/excid3/noticed \
@@ -399,6 +400,18 @@ Info on tailwind here. \
 https://tailwindcss.com
 
 ```bash
+bundle add "noticed"
+rails noticed:install:migrations
+rails db:migrate
+rails g noticed:notifier UrgentTaskNotifier
+```
+
+Run the usual commands and commit.
+
+```bash
+rubocop -a
+rails test
+rails test:system
 ```
 
 
