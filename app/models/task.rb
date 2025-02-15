@@ -13,6 +13,16 @@ class Task < ApplicationRecord
     due_date < Date.current && !completed
   end
 
+  def urgent?
+    (Time.current..24.hours.from_now).cover?(due_date) && !completed
+  end
+
+  def due_date_is_not_in_past
+    if due_date.present? && due_date < Date.current
+      errors.add(:due_date, "The Due Date can not be in the past.")
+    end
+  end
+
   def update_completed_at
     self.completed_at = if completed?
       Time.current

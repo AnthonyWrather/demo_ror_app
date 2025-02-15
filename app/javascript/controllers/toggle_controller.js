@@ -7,7 +7,7 @@ export default class extends Controller {
   toggleProfileCard() {
     this.profileCardTarget.classList.toggle("hidden")
   }
-  toggleNNotificationCard() {
+  toggleNotificationCard() {
     this.notificationCardTarget.classList.toggle("hidden")
   }
   toggleSidebar() {

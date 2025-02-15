@@ -382,6 +382,7 @@ Useful websites\
 https://www.ruby-toolbox.com/categories \
 https://github.com/activerecord-hackery/ransack
 
+
 Sort Tasks by Priority\
 Sort Tasks using Table headers.\
 Styling by Priority and Expired.
@@ -389,8 +390,13 @@ Styling by Priority and Expired.
 
 ## Notifications (Release v0.0.x)
 
-Notification UI
+Notification UI\
+Identify the urgent tasks.
 
+Install noticed and run bundler.\
+https://github.com/excid3/noticed \
+Info on tailwind here. \
+https://tailwindcss.com
 
 ```bash
 ```
