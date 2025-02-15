@@ -387,6 +387,17 @@ Sort Tasks using Table headers.\
 Styling by Priority and Expired.
 
 
+## Notifications (Release v0.0.x)
+
+Notification UI
+
+
+```bash
+```
+
+
+
+
 ## Next Section (Release v0.0.x)
 
 ```bash
