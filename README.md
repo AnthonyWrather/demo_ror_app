@@ -371,8 +371,16 @@ Search via debounce
 rails g stimulus search
 ```
 
+Search Task name using ransack.\
+Add the ransack gem and run
 
+```bash
+bundle install
+```
 
+Useful websites\
+https://www.ruby-toolbox.com/categories \
+https://github.com/activerecord-hackery/ransack
 
 
 
