@@ -414,7 +414,17 @@ rails test
 rails test:system
 ```
 
+** Note: ** You can add a console in the html by using
 
+```html
+<%= console %>
+```
+
+Notifications controller.
+
+```bash
+rails g controller notifications index
+```
 
 
 ## Next Section (Release v0.0.x)

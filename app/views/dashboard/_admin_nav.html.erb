@@ -13,8 +13,7 @@
       </div>
     <% end %>
     <div data-action="click->toggle#toggleNotificationCard" class="relative cursor-pointer">
-      <%= console %>
-      <% if current_user.notifications.unread.count > 0 %>
+      <% if current_user.notifications.unread.any? %>
         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
       <% end %>
       <%= inline_svg_tag("notification.svg") %>

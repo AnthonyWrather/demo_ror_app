@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notifications, only: [ "index" ]
   get "/search", to: "search#index"
   # Defines the root path route ("/")
   # root "posts#index"
