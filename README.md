@@ -335,7 +335,7 @@ Paginating Projects\
 Paginating Tasks
 
 Useful websites\
-https://www.ruby-toolbox.com/categories\
+https://www.ruby-toolbox.com/categories \
 https://ddnexus.github.io/pagy/
 
 Add pagy
@@ -343,6 +343,19 @@ Add pagy
 ```bash
 bundle install
 ```
+
+## Searching and Sorting
+
+Create the Search controller.
+
+```bash
+rails g controller search index
+```
+
+Edit app/controllers/search_controller.rb and add console to the index method.\
+You can type in params to see what you dealing with.
+
+
 
 ## Next Section
 
