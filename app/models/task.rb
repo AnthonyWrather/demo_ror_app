@@ -7,9 +7,18 @@ class Task < ApplicationRecord
   validates :name, uniqueness: { case_sensitive: false, scope: :project_id }
   enum :priority, { endeavour: -1, low: 0, medium: 1, high: 2, emergency: 3 }
   before_update :update_completed_at
+  after_update :notify_urgent_tasks
 
   scope :incomplete_first, -> { order(completed_at: :desc) }
   scope :completed, -> { where(completed: true) }
+  scope :urgent, -> { where(due_date: Time.current..24.hours.from_now).where(completed: false) }
+
+  def notify_urgent_tasks
+    urgent_tasks = Task.urgent
+    urgent_tasks.each do |task|
+      UrgentTaskNotifier.with(record: task).deliver(task.project.user)
+    end
+  end
 
   def expired?
     due_date < Date.current && !completed
