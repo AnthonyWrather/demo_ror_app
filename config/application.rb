@@ -41,7 +41,7 @@ module DemoRorApp
       # cron: "5 21 * * *", # cron-style scheduling format by fugit gem
       cron: "@midnight",
       class: "UrgentTaskJob", # name of the job class as a String; must reference an Active Job job class
-        description: "Send notifications for Urgent Tasks.", # optional description that appears in Dashboard
+        description: "Send notifications for Urgent Tasks." # optional description that appears in Dashboard
       }
       # production_task: {
       #   cron: "0 0,12 * * *",
