@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <% @tasks.each do |task| %>
-        <tr class="border-b border-gray-500 capitalize <%= "line-through text-green-700" if task.completed? %>">
+        <tr class="border-b border-gray-500 capitalize <%= "line-through text-white-700 bg-green-800" if task.completed? %>">
           <td class="px-4">
             <%= form_with model: [@project, task] do |form|%>
               <%= form.check_box :completed, class: "cursor-pointer", onchange: "this.form.requestSubmit()" %>
