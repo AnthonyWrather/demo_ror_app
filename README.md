@@ -428,8 +428,12 @@ Mark Notifications as read.
 rails g controller read_notifications
 ```
 
-Create an Urgent Task class method.
+Create an Urgent Task class method.\
+Setup Active Job.
 
+```bash
+rails g job urgent_task
+```
 
 
 ## Next Section (Release v0.0.x)
