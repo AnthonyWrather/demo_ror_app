@@ -430,10 +430,21 @@ rails g controller read_notifications
 
 Create an Urgent Task class method.\
 Setup Active Job.
-
+There is a management interface.
 ```bash
 rails g job urgent_task
 ```
+Install/Setup Good Job.
+```bash
+bundle add good_job
+bin/rails g good_job:install
+bin/rails db:migrate
+# Management interface.
+# http://127.0.0.1:3000/good_job
+```
+
+
+
 
 
 ## Next Section (Release v0.0.x)
