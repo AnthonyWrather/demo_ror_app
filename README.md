@@ -457,7 +457,7 @@ http://localhost:3000/rails/mailers/
 You can easily compare two releases on GitHub with\
 https://github.com/AnthonyWrather/demo_ror_app/compare/v0.0.9...v0.0.10
 
-## Dashboard Setup (Release v0.0.x)
+## Dashboard Setup (Release v0.0.12)
 
 GitHub Branching and Merging
 
