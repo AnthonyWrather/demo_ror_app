@@ -4,7 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_one  :owned_organisation, class_name: "Organisation", foreign_key: :owner_id, inverse_of: :owner, dependent: :destroy
   has_many :projects
   has_many :tasks, through: :projects
   has_many :notifications, as: :recipient, dependent: :destroy, class_name: "Noticed::Notification"
+  accepts_nested_attributes_for :owned_organisation
 end

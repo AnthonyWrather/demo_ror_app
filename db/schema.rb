@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_16_200133) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_17_222413) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -127,6 +127,15 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_16_200133) do
     t.index ["recipient_type", "recipient_id"], name: "index_noticed_notifications_on_recipient"
   end
 
+  create_table "organisations", force: :cascade do |t|
+    t.string "subdomain"
+    t.string "name"
+    t.bigint "owner_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_organisations_on_owner_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
@@ -159,6 +168,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_16_200133) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "organisations", "users", column: "owner_id"
   add_foreign_key "projects", "users"
   add_foreign_key "tasks", "projects"
 end

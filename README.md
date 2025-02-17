@@ -502,12 +502,20 @@ bundle add simple_calendar
 
 Current user access to Projects and Tasks.
 
-## Real time updates (Release v0.0.x)
+## Real time updates (Release v0.0.15)
 
 Turbo stream for Realtime updates.
 
+## Multitenancy (Release v0.0.16)
+
+Adding organisations.
 ```bash
+rails g model organisation subdomain name owner:belongs_to
+# Edit file first.
+rails db:migrate
 ```
+
+
 
 ```bash
 ```
