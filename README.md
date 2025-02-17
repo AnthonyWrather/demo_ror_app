@@ -484,6 +484,20 @@ https://github.com/ankane/groupdate
 bundle add groupdate
 ```
 
+## Build the Calendar (Release v0.0.13)
+
+Build a Calendar for the Tasks. (Branch BuildACalendarForTasks)
+
+```bash
+rails g controller calendar index
+```
+
+Add the Simple Calendar gem.\
+https://github.com/excid3/simple_calendar
+```bash
+bundle add simple_calendar
+```
+
 
 
 ## Next Section (Release v0.0.x)

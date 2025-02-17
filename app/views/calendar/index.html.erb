@@ -1,0 +1,16 @@
+<div class="bg-gray-300 mt-6 p-2 mx-auto size-fit">
+  <p class="text-xl"> Monthly ToDo</p>
+  <%= month_calendar do |date| %>
+    <%= date %>
+  <% end %>
+
+  <p class="text-xl"> Daily ToDo</p>
+  <%= calendar(number_of_days: 4, events: @tasks, attribute: :due_date) do |date,tasks| %>
+    <%= date %>
+    <% tasks.each do |task| %>
+      <div class="p-1 border-2">
+        <%= link_to task.name, project_path(task.project) %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
