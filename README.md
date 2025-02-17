@@ -515,9 +515,19 @@ rails g model organisation subdomain name owner:belongs_to
 rails db:migrate
 ```
 
-
-
+BONUS: Adding redis-commander\
+https://hub.docker.com/r/rediscommander/redis-commander \
+http://localhosr:8081
 ```bash
+  redis-commander:
+    container_name: redis-commander
+    hostname: redis-commander
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+    - REDIS_HOSTS=local:redis:6379
+    ports:
+    - "8081:8081"
 ```
 
 
