@@ -388,7 +388,7 @@ Sort Tasks using Table headers.\
 Styling by Priority and Expired.
 
 
-## Notifications (Release v0.0.x)
+## Notifications (Release v0.0.11)
 
 Notification UI\
 Identify the urgent tasks.\
@@ -443,7 +443,13 @@ bin/rails db:migrate
 # http://127.0.0.1:3000/good_job
 ```
 
+Action Mailer for Urgent Tasks.
 
+```bash
+bin/rails generate mailer urgent_task
+# You can create a preview portal
+# http://localhost:3000/rails/mailers/urgent_task_mailer/
+```
 
 
 
