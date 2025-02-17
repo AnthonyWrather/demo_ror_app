@@ -100,20 +100,20 @@ bin/dev
 
 Web App
 
-```bash
-http://127.0.0.1:3000/
-http://127.0.0.1:3000/up
-http://127.0.0.1:3000/rails/info/routes
-```
+Useful links.
+The webapp\
+http://localhost:3000/ \
+An endpoint to see if your running.\
+http://localhost:3000/up \
+All your webserver routes.\
+http://localhost:3000/rails/info/routes
 
 PgAdmin
 
 Create a connection to name:postgres hostname:postgres user:postgres password:progress\
-By using dev containers there is a complete separation between dev, test and production.
+http://localhost:15432/
 
-```bash
-http://127.0.0.1:15432/
-```
+By using dev containers there is a complete separation between dev, test and production.
 
 ## Create the home page and basic styling. (Release v0.0.2)
 
@@ -388,7 +388,7 @@ Sort Tasks using Table headers.\
 Styling by Priority and Expired.
 
 
-## Notifications (Release v0.0.x)
+## Notifications (Release v0.0.11)
 
 Notification UI\
 Identify the urgent tasks.\
@@ -429,7 +429,7 @@ rails g controller read_notifications
 ```
 
 Create an Urgent Task class method.\
-Setup Active Job.
+Setup Active Job.\
 There is a management interface.
 ```bash
 rails g job urgent_task
@@ -439,10 +439,23 @@ Install/Setup Good Job.
 bundle add good_job
 bin/rails g good_job:install
 bin/rails db:migrate
-# Management interface.
-# http://127.0.0.1:3000/good_job
 ```
 
+Management interface.\
+http://localhost:3000/good_job
+
+Action Mailer for Urgent Tasks.
+
+```bash
+bin/rails generate mailer urgent_task
+```
+You can create a preview portal for the mailers\
+http://localhost:3000/rails/mailers/
+
+## Bonus Tip
+
+You can easily compare two releases on GitHub with\
+https://github.com/AnthonyWrather/demo_ror_app/compare/v0.0.9...v0.0.10
 
 
 
