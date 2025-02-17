@@ -441,7 +441,7 @@ bin/rails g good_job:install
 bin/rails db:migrate
 ```
 
-Management interface.
+Management interface.\
 http://localhost:3000/good_job
 
 Action Mailer for Urgent Tasks.
@@ -449,8 +449,8 @@ Action Mailer for Urgent Tasks.
 ```bash
 bin/rails generate mailer urgent_task
 ```
-You can create a preview portal\
-http://localhost:3000/rails/mailers/urgent_task_mailer/
+You can create a preview portal for the mailers\
+http://localhost:3000/rails/mailers/
 
 ## Bonus Tip
 
