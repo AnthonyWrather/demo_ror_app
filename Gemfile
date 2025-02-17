@@ -39,6 +39,11 @@ gem "inline_svg"
 gem "htmlbeautifier"
 gem "pagy"
 gem "ransack"
+gem "devise", "~> 4.9"
+gem "noticed", "~> 2.6"
+gem "good_job", "~> 4.9"
+gem "chartkick", "~> 5.1"
+gem "groupdate", "~> 6.5"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -64,9 +69,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "devise", "~> 4.9"
-
-gem "noticed", "~> 2.6"
-
-gem "good_job", "~> 4.9"

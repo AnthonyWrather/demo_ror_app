@@ -452,7 +452,7 @@ bin/rails generate mailer urgent_task
 You can create a preview portal for the mailers\
 http://localhost:3000/rails/mailers/
 
-## Bonus Tip
+## Bonus Tip (No Release)
 
 You can easily compare two releases on GitHub with\
 https://github.com/AnthonyWrather/demo_ror_app/compare/v0.0.9...v0.0.10
@@ -471,9 +471,17 @@ The default build tools must pass before a branch can be merged.
 
 Also added CodeQL with AI suggestions to see how that works.
 
-Build Dashboard cards. Create a branch called BuildDashboardCards
-
+Build Dashboard cards. Create a branch called BuildDashboardCards\
+Build the Charts. Create a branch called BuildTheCharts\
+https://github.com/ankane/chartkick
 ```bash
+bundle add chartkick
+```
+
+Also need to install groupdate\
+https://github.com/ankane/groupdate
+```bash
+bundle add groupdate
 ```
 
 
