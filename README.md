@@ -498,9 +498,16 @@ https://github.com/excid3/simple_calendar
 bundle add simple_calendar
 ```
 
-## Current user authorisation. (Release v0.0.14)
+## Current user authorisation (Release v0.0.14)
 
 Current user access to Projects and Tasks.
+
+## Real time updates (Release v0.0.x)
+
+Turbo stream for Realtime updates.
+
+```bash
+```
 
 ```bash
 ```
