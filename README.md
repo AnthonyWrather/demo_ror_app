@@ -459,7 +459,19 @@ https://github.com/AnthonyWrather/demo_ror_app/compare/v0.0.9...v0.0.10
 
 ## Dashboard Setup (Release v0.0.x)
 
-Build Dashboard cards.
+GitHub Branching and Merging
+
+Setup a Ruleset on GitHub that enforce branching and Pull Requests (PR) going forwards.\
+The default build tools must pass before a branch can be merged.
+
+* scan_js
+* scan_ruby
+* lint
+* test
+
+Also added CodeQL with AI suggestions to see how that works.
+
+Build Dashboard cards. Create a branch called BuildDashboardCards
 
 ```bash
 ```
