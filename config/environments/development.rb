@@ -15,6 +15,10 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # deliver emails locally when in dev env.
+  config.action_mailer.delivery_method = :letter_opener_web
+  Rails.application.routes.default_url_options = { host: "lvh.me", port: 3000 }
+
   # Show full error reports.
   config.consider_all_requests_local = true
 

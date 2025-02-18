@@ -559,6 +559,21 @@ rails g migration add_organisation_to_users organisation_id:integer
 rails db:migrate
 ```
 
+Invite users via email and setup dev test email service.\
+Adding a gem called devise_invitable\
+https://github.com/scambra/devise_invitable
+```bash
+bundle add devise_invitable
+rails generate devise_invitable:install
+rails generate devise_invitable user
+rails db:migrate
+```
+
+Install gem letter_opener_web\
+https://github.com/fgrehm/letter_opener_web \
+There is a new development interface to read the sent emails.\
+http://localhost:3000/letter_opener \
+http://enteredsubdomainn.lvh.me:3000/letter_opener
 
 
 
