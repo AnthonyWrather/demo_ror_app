@@ -10,22 +10,29 @@
 
 user1 = User.create(
   email: "user1@test.com",
-  password: "password"
+  password: "password",
+  full_name: "User One"
 )
 
 user2 = User.create(
   email: "user2@test.com",
-  password: "password"
+  password: "password",
+  full_name: "User Two"
+
 )
 
 User.create(
   email: "user3@test.com",
-  password: "password"
+  password: "password",
+  full_name: "User Three"
+
 )
 
 User.create(
   email: "user4@test.com",
-  password: "password"
+  password: "password",
+  full_name: "User Four"
+
 )
 
 projects_user1 = rand(1..10).times.map do
