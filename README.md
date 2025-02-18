@@ -530,6 +530,14 @@ http://localhosr:8081
     - "8081:8081"
 ```
 
+HINT: Great site to look up Ruby, Rails and Rspec usage.\
+https://apidock.com/rails
+
+Setup nested attributes for organisations.
+```bash
+rails g migration add_full_name_to_users full_name:string
+rails db:migrate
+```
 
 
 
