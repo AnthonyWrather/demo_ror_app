@@ -290,6 +290,7 @@ GEM
     reverse_markdown (3.0.0)
       nokogiri
     rexml (3.4.0)
+    rolify (6.0.1)
     rubocop (1.71.2)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -430,6 +431,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 7.2.1, >= 7.2.1.2)
   ransack
+  rolify (~> 6.0)
   rubocop-rails-omakase
   selenium-webdriver
   simple_calendar (~> 3.1)
