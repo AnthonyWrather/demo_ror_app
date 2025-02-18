@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  ROLES = [ :team_leader, :team_member ]
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
@@ -11,6 +13,11 @@ class User < ApplicationRecord
   belongs_to :organisation, optional: true
   accepts_nested_attributes_for :owned_organisation, reject_if: :all_blank
   before_create :set_organisation, if: :created_by_invite?
+  after_create :assign_default_role
+
+  def assign_default_role
+    self.add_role(:team_member) if self.roles.blank?
+  end
 
   def set_organisation
     self.organisation_id = invited_by.owned_organisation.id

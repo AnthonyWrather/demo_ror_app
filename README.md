@@ -575,8 +575,14 @@ There is a new development interface to read the sent emails.\
 http://localhost:3000/letter_opener \
 http://enteredsubdomainn.lvh.me:3000/letter_opener
 
-Add Organisation to the invited User.
-
+Add Organisation to the invited User.\
+Setup Roles with the rolify gem.\
+https://github.com/RolifyCommunity/rolify
+```bash
+bundle add rolify
+rails g rolify Role User
+rails db:migrate
+```
 
 
 
