@@ -8,7 +8,12 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource)
-    dashboard_index_url(subdomain: resource.owned_organisation.subdomain)
+    if resource.organisation_owner?
+      dashboard_index_url(subdomain: resource.owned_organisation.subdomain)
+    else
+      # dashboard_index_url(subdomain: resource.organisation.subdomain)
+      dashboard_index_url(subdomain: resource.invited_by.owned_organisation.subdomain)
+    end
   end
 
   def configure_permitted_parameters
