@@ -551,6 +551,15 @@ http://lvh.me:3000/users/sign_in \
 which will redirect you to the correct Subdomain\
 http://enteredsubdomain.lvh.me:3000/dashboard
 
+Organisation Users controller.
+```bash
+rails g controller organisation_users index
+# Edit files
+rails g migration add_organisation_to_users organisation_id:integer
+rails db:migrate
+```
+
+
 
 
 ## Next Section (Release v0.0.x)

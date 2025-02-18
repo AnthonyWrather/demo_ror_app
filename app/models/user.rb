@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :projects
   has_many :tasks, through: :projects
   has_many :notifications, as: :recipient, dependent: :destroy, class_name: "Noticed::Notification"
+  belongs_to :organisation, optional: true
   accepts_nested_attributes_for :owned_organisation, reject_if: :all_blank
 end

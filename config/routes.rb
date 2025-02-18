@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :organisation_users
+  # get "organisation_users/index"
   get "/calendar", to: "calendar#index"
   mount GoodJob::Engine => "good_job"
   resources :notifications, only: [ "index" ]
