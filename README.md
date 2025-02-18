@@ -539,6 +539,18 @@ rails g migration add_full_name_to_users full_name:string
 rails db:migrate
 ```
 
+Setup Subdomains with acts as tenant gem.\
+Install and configure acts_as_tenant\
+https://github.com/ErwinM/acts_as_tenant
+```bash
+bundle add acts_as_tenant
+```
+
+Then to access the login page you now go to\
+http://lvh.me:3000/users/sign_in \
+which will redirect you to the correct Subdomain\
+http://enteredsubdomain.lvh.me:3000/dashboard
+
 
 
 ## Next Section (Release v0.0.x)
