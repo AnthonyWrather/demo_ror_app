@@ -575,6 +575,9 @@ There is a new development interface to read the sent emails.\
 http://localhost:3000/letter_opener \
 http://enteredsubdomainn.lvh.me:3000/letter_opener
 
+Add Organisation to the invited User.
+
+
 
 
 ## Next Section (Release v0.0.x)
