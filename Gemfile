@@ -46,17 +46,15 @@ gem "chartkick", "~> 5.1"
 gem "groupdate", "~> 6.5"
 gem "simple_calendar", "~> 3.1"
 gem "acts_as_tenant", "~> 1.0"
+gem "devise_invitable", "~> 2.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
-
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
-
   gem "faker"
 end
 
@@ -64,6 +62,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   gem "solargraph"
+  gem "letter_opener_web", "~> 3.0"
 end
 
 group :test do
