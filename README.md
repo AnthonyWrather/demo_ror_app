@@ -321,7 +321,7 @@ rails db:drop
 rails db:reset
 ```
 
-Using the Rails console to validate the Dev Test data.
+## DEBUG: Using the Rails console to validate the Dev Test data.
 
 ```bash
 irb
@@ -361,7 +361,7 @@ Create the Search controller.
 rails g controller search index
 ```
 
-Edit app/controllers/search_controller.rb and add console to the index method.\
+## DEBUG: Edit app/controllers/search_controller.rb and add console to the index method.
 You can type in params to see what you dealing with.
 
 Styling the Search Project page.\
@@ -414,7 +414,7 @@ rails test
 rails test:system
 ```
 
-** Note: ** You can add a console in the html by using
+## DEBUG: You can add a console in the html by using
 
   `<%= console %>`
 
@@ -589,11 +589,24 @@ BONUS: If you can't drop database because  of a stale connection.
 SELECT pg_terminate_backend(pg_stat_activity.pid)
 FROM pg_stat_activity
 WHERE pg_stat_activity.datname = 'demo_ror_app_development';
+
+# And sometimes its the webserver
+rm -f /workspaces/demo_ror_app/tmp/pids/server.pid
 ```
 
 NOTE: Sanity Testing the app and fix some as we go.
 
 Set the background to be full height and displaying read notifications.
+
+## DEBUG: You can embed a breakpoint in the code and use the debugger with.
+```ruby
+  binding.break
+  binding.pry
+```
+
+Setting the Roles UI.
+
+
 
 
 
@@ -601,3 +614,7 @@ Set the background to be full height and displaying read notifications.
 
 ```bash
 ```
+
+Additions TBD\
+Write the rspec so it can be added to the notes. Consider breaking it up so it can be done with each chapter.\
+Need to see how to integrate the SCRUM and Microservice coursework.
