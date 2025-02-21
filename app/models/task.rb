@@ -1,4 +1,5 @@
 class Task < ApplicationRecord
+  # acts_as_tenant :organisation
   belongs_to :project, touch: true
   has_many :noticed_events, as: :record, dependent: :destroy, class_name: "Noticed::Event"
   has_many :notifications, through: :noticed_events, class_name: "Noticed::Notification"
@@ -14,7 +15,7 @@ class Task < ApplicationRecord
   scope :completed, -> { where(completed: true) }
   scope :pending, -> { where("due_date > ? AND completed = ?", Date.current, false) }
   scope :expired, -> { where("due_date < ? AND completed = ?", Date.current, false) }
-  scope :urgent, -> { where(due_date: Time.current..24.hours.from_now).where(completed: false) }
+  scope :urgent, -> { where(due_date: (Time.current..24.hours.from_now)).where(completed: false) }
 
   def notify_urgent_tasks
     UrgentTaskJob.perform_later

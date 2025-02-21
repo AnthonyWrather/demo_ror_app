@@ -15,8 +15,10 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    # @task = Task.new
-    @task = @project.tasks.build
+    @task = Task.new
+    # TODO: Investigate?
+    # Seems to be getting sent a task not a project.
+    # @task = @project.task.build
   end
 
   # GET /tasks/1/edit

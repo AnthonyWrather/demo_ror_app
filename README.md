@@ -584,6 +584,17 @@ rails g rolify Role User
 rails db:migrate
 ```
 
+BONUS: If you can't drop database because  of a stale connection.
+```sql
+SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'demo_ror_app_development';
+```
+
+NOTE: Sanity Testing the app and fix some as we go.
+
+
+
 
 
 ## Next Section (Release v0.0.x)
