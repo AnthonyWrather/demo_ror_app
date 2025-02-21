@@ -64,6 +64,7 @@ group :development do
   gem "web-console"
   gem "solargraph"
   gem "letter_opener_web", "~> 3.0"
+  gem "pry"
 end
 
 group :test do
