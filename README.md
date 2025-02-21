@@ -605,8 +605,13 @@ Set the background to be full height and displaying read notifications.
 ```
 
 Setting the Roles UI.
+Create the scaffold for Teams.
+Found a workaround for setting the tenant and a potential fix for the automatic subdomain.
 
-
+```bash
+rails g scaffold team name organisation:references
+rails db:migrate
+```
 
 
 
@@ -617,4 +622,5 @@ Setting the Roles UI.
 
 Additions TBD\
 Write the rspec so it can be added to the notes. Consider breaking it up so it can be done with each chapter.\
-Need to see how to integrate the SCRUM and Microservice coursework.
+Need to see how to integrate the SCRUM and Microservice coursework.\
+Need to consider adding a section on GitHub CI/CD usage and code syntax/security checks.
