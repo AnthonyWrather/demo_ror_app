@@ -593,7 +593,7 @@ WHERE pg_stat_activity.datname = 'demo_ror_app_development';
 
 NOTE: Sanity Testing the app and fix some as we go.
 
-
+Set the background to be full height and displaying read notifications.
 
 
 

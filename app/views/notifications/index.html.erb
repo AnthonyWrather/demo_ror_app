@@ -1,11 +1,12 @@
-<div class="w-96 p-6 mx-auto text-gray-200">
+<div class="w-md p-6 mx-auto text-gray-200">
   <div class="flex justify-between p-2">
     <h1 class="font-bold ">Notifications</h1>
     <div class="text-blue-500">
       <%= link_to 'Mark all as read.', read_notifications_path %>
     </div>
   </div>
-  <div class="bg-gray-400 p-4 rounded-lg max-h-96 overflow-y-scroll">
+  <h1 class="font-bold mt-6">Unread Notifications</h1>
+  <div class="bg-gray-400 p-4 w-md rounded-lg max-h-96 overflow-y-scroll">
     <ul>
       <% @notifications.unread.each do |notification| %>
         <li class="mb-6 border-b border-gray-800">
@@ -16,6 +17,21 @@
     <% if @notifications.unread.empty? %>
       <div class="p-4">
         You have no unread Notifications.
+      </div>
+    <% end %>
+  </div>
+  <h1 class="font-bold mt-6">Read Notifications</h1>
+  <div class="bg-gray-400 p-4 w-md rounded-lg max-h-96 overflow-y-scroll">
+    <ul>
+      <% @notifications.read.each do |notification| %>
+        <li class="mb-6 border-b border-gray-800">
+          <%= link_to notification.message %>
+        </li>
+      <% end %>
+    </ul>
+    <% if @notifications.read.empty? %>
+      <div class="p-4">
+        You have no read Notifications.
       </div>
     <% end %>
   </div>
