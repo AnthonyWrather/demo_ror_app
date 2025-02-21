@@ -19,8 +19,39 @@
       <%= inline_svg_tag("notification.svg") %>
       <%= render "dashboard/notification_card" %>
     </div>
+    <table class="">
+      <tr>
+        <td class="p-2 border border-gray-200">
+          <div class="text-xs w-auto">
+            <%if current_tenant %>
+              <p class="text-green-600">current_tenant</p>
+              <p><%= current_tenant.full_name %></p>
+              <p><%= current_tenant.email %></p>
+              <p><%= current_tenant.organisation.subdomain if current_tenant.organisation %></p>
+              <p><%= current_tenant.owned_organisation.subdomain if current_tenant.owned_organisation %></p>
+            <% else %>
+              <p c class="text-xl">current_tenant not set.</p>
+            <% end %>
+          </div>
+        </td>
+        <td class="p-2 border border-gray-200">
+          <div class="text-xs w-auto">
+            <%if current_user %>
+              <p class="text-green-600">current_user</p>
+              <p><%= current_user.full_name %></p>
+              <p><%= current_user.email %></p>
+              <p><%= current_user.organisation.subdomain if current_user.organisation %></p>
+              <p><%= current_user.owned_organisation.subdomain if current_user.owned_organisation %></p>
+            <% else %>
+              <p class="text-xl">current_user not set.</p>
+            <% end %>
+          </div>
+        </td>
+      </tr>
+    </table>
     <div data-action="click->toggle#toggleProfileCard" class="relative cursor-pointer">
       <%= inline_svg_tag("user.svg") %>
       <%= render "dashboard/profile_card" %>
     </div>
+    <% console %>
   </nav>

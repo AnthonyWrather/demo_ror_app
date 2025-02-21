@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :teams
   resources :organisation_users do
     member do
       post "/change_role", to: "organisation_users#change_role"
