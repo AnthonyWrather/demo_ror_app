@@ -12,18 +12,18 @@ class User < ApplicationRecord
   has_many :notifications, as: :recipient, dependent: :destroy, class_name: "Noticed::Notification"
   belongs_to :organisation, optional: true
   accepts_nested_attributes_for :owned_organisation, reject_if: :all_blank
-  before_create :set_organisation, if: :created_by_invite?
   after_create :assign_default_role
+  before_create :set_organisation, if: :created_by_invite?
 
-  def assign_default_role
-    self.add_role(:team_member) if self.roles.blank?
+  def organisation_owner?
+    owned_organisation.present?
   end
 
   def set_organisation
     self.organisation_id = invited_by.owned_organisation.id
   end
 
-  def organisation_owner?
-    owned_organisation.present?
+  def assign_default_role
+    self.add_role(:team_member) if self.roles.blank?
   end
 end

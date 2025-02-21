@@ -7,7 +7,13 @@
       <thead class="text-left capitalize rounded-md border-b border-gray-500">
         <tr>
           <th class="px-4 py-3"> Email</th>
+          <th class="px-4 py-3"> Full name</th>
           <th class="px-4 py-3"> Roles</th>
+          <th class="px-4 py-3"> Org Id</th>
+          <th class="px-4 py-3"> Org Owner</th>
+          <th class="px-4 py-3"> Org Owned</th>
+          <th class="px-4 py-3"> Org SubDomain</th>
+
           <th class="px-4 py-3"> Change Roles</th>
         </tr>
       </thead>
@@ -15,12 +21,27 @@
         <% @users.each do |user| %>
           <tr class="border-b border-gray-500 capitalize">
             <td class="px-4 py-3"><%= user.email%></td>
+            <td class="px-4 py-3"><%= user.full_name%></td>
             <td class="px-4 py-3"> Member </td>
+            <td class="px-4 py-3"><%= user.organisation_id%></td>
+            <td class="px-4 py-3"><%= user.organisation_owner?%></td>
+            <td class="px-4 py-3">
+              <% if user.organisation_owner? %>
+                <%= user.owned_organisation.name%>
+              <% end %>
+            </td>
+            <td class="px-4 py-3">
+              <% if user.organisation_owner? %>
+                <%= user.owned_organisation.subdomain%></td>
+              <% else %>
+                <%= user.organisation.subdomain%></td>
+              <% end %>
             <td class="px-4 py-3">
               <%= form_with url: change_role_organisation_user_path(user) do |form| %>
                 <%= form.select :role, User::ROLES, {prompt: "Select Role"}, onchange: "this.form.requestSubmit()" %>
               <% end %>
             </td>
+
           </tr>
         <% end%>
         <%= console %>

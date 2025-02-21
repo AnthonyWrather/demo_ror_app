@@ -8,51 +8,56 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-user1 = User.create(
-  email: "user1@test.com",
+FirstOrgUser = User.create(
+  email: "firstorg@test.com",
   password: "password",
-  full_name: "User One"
+  full_name: "First Org User Full Name",
+  invitations_count: 0
 )
 
-user2 = User.create(
-  email: "user2@test.com",
-  password: "password",
-  full_name: "User Two"
-
+FirstOrg = Organisation.create(
+  subdomain: "FirstOrgSubDomain",
+  name: "FirstOrgName",
+  owner_id: FirstOrgUser.id
 )
 
-User.create(
-  email: "user3@test.com",
+SecondOrgUser = User.create(
+  email: "secondorg@test.com",
   password: "password",
-  full_name: "User Three"
-
+  full_name: "Second Org User Full Name",
+  invitations_count: 0
 )
 
-User.create(
-  email: "user4@test.com",
-  password: "password",
-  full_name: "User Four"
-
+SecondOrg = Organisation.create(
+  subdomain: "SecondOrgSubDomain",
+  name: "SecondOrgName",
+  owner_id: SecondOrgUser.id
 )
 
-projects_user1 = rand(1..10).times.map do
-  Project.create!(name: Faker::Educator.unique.subject, user: user1)
-end
-
-projects_user1.each do |project|
-  rand(1..20).times do
-    Task.create!(name: Faker::ProgrammingLanguage.unique.name,
-      project: project, priority: rand(-1..3), due_date: Faker::Date.forward(days: 60))
+  # ActsAsTenant.with_tenant(FirstOrgUser) do
+  projects_FirstOrgUser = rand(1..10).times.map do
+    Project.create!(name: Faker::Educator.unique.subject, user: FirstOrgUser)
   end
-end
 
-projects_user2 = rand(1..10).times.map do
-  Project.create!(name: Faker::Educator.unique.subject, user: user2)
-end
-
-projects_user2.each do |project|
-  rand(1..20).times do
-    Task.create!(name: Faker::ProgrammingLanguage.unique.name,
-      project: project, priority: rand(-1..3), due_date: Faker::Date.forward(days: 60))
+  current_user = projects_FirstOrgUser
+  projects_FirstOrgUser.each do |project|
+    rand(1..20).times do
+      Task.create!(name: Faker::ProgrammingLanguage.unique.name,
+        project: project, priority: rand(-1..3), due_date: Faker::Date.forward(days: rand(1..60)))
+    end
   end
-end
+  # end
+
+  # ActsAsTenant.with_tenant(SecondOrgUser) do
+  projects_SecondOrgUser = rand(1..10).times.map do
+    Project.create!(name: Faker::Educator.unique.subject, user: SecondOrgUser)
+  end
+
+  current_user = projects_SecondOrgUser
+  projects_SecondOrgUser.each do |project|
+    rand(1..20).times do
+      Task.create!(name: Faker::ProgrammingLanguage.unique.name,
+        project: project, priority: rand(-1..3), due_date: Faker::Date.forward(days: rand(1..60)))
+    end
+  end
+# end
