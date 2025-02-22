@@ -2,7 +2,6 @@
   <% if team.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-md mt-3">
       <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
-
       <ul class="list-disc ml-6">
         <% team.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,12 +9,16 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="my-5">
-    <%= form.label :name %>
+  <div class="my-5 text-gray-200">
+    <%= form.label :name, class: "font-bold" %>
     <%= form.text_field :name, class: ["block shadow-sm rounded-md border outline-hidden px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": team.errors[:name].none?, "border-red-400 focus:outline-red-600": team.errors[:name].any?}] %>
   </div>
-
+  <div class="my-5 text-gray-200 mt-4">
+    <%= form.label :select_team_members, class: "font-bold" %>
+    <br>
+    <% @users = User.where(organisation_id: team.organisation_id).or(User.where(owned_organisation: team.organisation_id)) %>
+    <%= form.collection_check_boxes :user_ids, @users, :id, :email, class: ["text-gray-200 block shadow-sm rounded-md border outline-hidden px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": team.errors[:name].none?, "border-red-400 focus:outline-red-600": team.errors[:name].any?}] %>
+  </div>
   <div class="inline">
     <%= form.submit class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
   </div>

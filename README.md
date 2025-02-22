@@ -613,6 +613,15 @@ rails g scaffold team name organisation:references
 rails db:migrate
 ```
 
+Add Team Members to the Team.
+```bash
+rails g model team_member user:references team:references
+rails db:migrate
+```
+
+
+
+
 
 
 ## Next Section (Release v0.0.x)
