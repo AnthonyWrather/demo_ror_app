@@ -7,4 +7,8 @@
     <strong class="block font-medium mb-1">Organisation:</strong>
     <%= team.organisation.name %>
   </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Team Members</strong>
+    <%= team.users.map(&:email).join(", ") %>
+  </p>
 </div>

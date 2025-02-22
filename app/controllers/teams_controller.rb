@@ -1,11 +1,21 @@
 class TeamsController < ApplicationController
   layout "admin"
   before_action :authenticate_user!
+  before_action :find_the_current_tenant
   before_action :set_team, only: %i[ show edit update destroy ]
+
+  def find_the_current_tenant
+    current_account = current_user
+    set_current_tenant(current_account)
+  end
 
   # GET /teams or /teams.json
   def index
     @teams = Team.all
+  end
+
+  def users
+    @users = User.where(organisation_id: team.organisation_id).or(User.where(owned_organisation: team.organisation_id))
   end
 
   # GET /teams/1 or /teams/1.json
@@ -67,6 +77,6 @@ class TeamsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def team_params
-      params.require(:team).permit(:name, :organisation_id)
+      params.require(:team).permit(:name, :organisation_id, user_ids: [])
     end
 end
